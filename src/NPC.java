@@ -39,7 +39,21 @@ public class NPC implements Runnable
                         }
                     }
                     Game.setCurrentPlayer(++playerPosition);
+
+                    notify();
+                    try {
+                        wait();
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
                 }
+                notify();
+                try {
+                    wait();
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+
             }
         }
 
