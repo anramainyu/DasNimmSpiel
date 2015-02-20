@@ -6,6 +6,16 @@ public class Game
 
     private static int anzStreichhoelzer;
     private static int currentPlayer;
+    private static int maxPlayer;
+
+    public static void setMaxPlayer(int maxPlayer)
+    {
+        Game.maxPlayer = maxPlayer;
+    }
+
+    public static int getMaxPlayer() {
+        return maxPlayer;
+    }
 
     public static void takeStreichholz(int anz)
     {
