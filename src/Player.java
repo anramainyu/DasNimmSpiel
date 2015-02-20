@@ -8,6 +8,10 @@ public class Player implements Runnable
     String name;
     Random zuffi = new Random();
 
+    public Player(String name) {
+        this.name = name;
+    }
+
     @Override
     public void run()
     {
